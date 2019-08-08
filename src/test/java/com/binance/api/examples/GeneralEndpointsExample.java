@@ -2,6 +2,7 @@ package com.binance.api.examples;
 
 import com.binance.api.client.BinanceApiClientFactory;
 import com.binance.api.client.BinanceApiRestClient;
+import com.binance.api.client.BinanceApiWebSocketClient;
 import com.binance.api.client.domain.general.Asset;
 import com.binance.api.client.domain.general.ExchangeInfo;
 import com.binance.api.client.domain.general.FilterType;
@@ -18,6 +19,7 @@ public class GeneralEndpointsExample {
   public static void main(String[] args) {
     BinanceApiClientFactory factory = BinanceApiClientFactory.newInstance();
     BinanceApiRestClient client = factory.newRestClient();
+    BinanceApiWebSocketClient ws = factory.newWebSocketClient();
 
     // Test connectivity
     client.ping();
